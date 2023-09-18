@@ -1,0 +1,22 @@
+# Arquivos de compilação e saída
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+
+# Pacotes NuGet
+packages/
+
+# Arquivos de configuração do Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Logs e arquivos temporários
+*.log
+*.swp
+Thumbs.db
+Desktop.ini
