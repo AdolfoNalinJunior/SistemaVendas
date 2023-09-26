@@ -30,7 +30,7 @@
         {
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAvancar = new System.Windows.Forms.Button();
@@ -54,14 +54,14 @@
             this.txtNome.Size = new System.Drawing.Size(217, 29);
             this.txtNome.TabIndex = 1;
             // 
-            // textBox1
+            // txtSenha
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(105, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(217, 29);
-            this.textBox1.TabIndex = 3;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(105, 81);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(217, 29);
+            this.txtSenha.TabIndex = 3;
             // 
             // lblSenha
             // 
@@ -81,6 +81,7 @@
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cacelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAvancar
             // 
@@ -90,6 +91,7 @@
             this.btnAvancar.TabIndex = 5;
             this.btnAvancar.Text = "Avançar";
             this.btnAvancar.UseVisualStyleBackColor = true;
+            this.btnAvancar.Click += new System.EventHandler(this.btnAvancar_Click);
             // 
             // frmLogin
             // 
@@ -98,11 +100,12 @@
             this.ClientSize = new System.Drawing.Size(384, 183);
             this.Controls.Add(this.btnAvancar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,7 +116,7 @@
 
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAvancar;

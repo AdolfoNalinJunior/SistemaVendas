@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaVenda.br.pro.com.view
 {
-    public partial class HistoricoVenda : Form
+    public partial class frmPagamento : Form
     {
-        public HistoricoVenda()
+        public frmPagamento()
         {
             InitializeComponent();
         }

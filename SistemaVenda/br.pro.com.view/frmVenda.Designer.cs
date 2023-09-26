@@ -419,8 +419,8 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dgvVenda);
             this.Name = "frmVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Vendas";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmVenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
             this.gbConsumidor.ResumeLayout(false);

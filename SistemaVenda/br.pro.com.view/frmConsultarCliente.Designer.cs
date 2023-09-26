@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lblPesquisar = new System.Windows.Forms.Label();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.dgCliente = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPesquisar
@@ -43,25 +43,27 @@
             this.lblPesquisar.Size = new System.Drawing.Size(56, 13);
             this.lblPesquisar.TabIndex = 0;
             this.lblPesquisar.Text = "Pesquisar:";
-            this.lblPesquisar.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtPesquisar
+            // txtNome
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(108, 77);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(229, 20);
-            this.txtPesquisar.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(108, 77);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(229, 20);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
             // 
-            // dgvCliente
+            // dgCliente
             // 
-            this.dgvCliente.AllowUserToAddRows = false;
-            this.dgvCliente.AllowUserToDeleteRows = false;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(21, 131);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.Size = new System.Drawing.Size(744, 273);
-            this.dgvCliente.TabIndex = 2;
+            this.dgCliente.AllowUserToAddRows = false;
+            this.dgCliente.AllowUserToDeleteRows = false;
+            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCliente.Location = new System.Drawing.Point(27, 127);
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.ReadOnly = true;
+            this.dgCliente.Size = new System.Drawing.Size(744, 273);
+            this.dgCliente.TabIndex = 2;
+            this.dgCliente.DoubleClick += new System.EventHandler(this.dgCliente_DoubleClick);
+            this.dgCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvCliente_KeyPress);
             // 
             // btnPesquisar
             // 
@@ -78,12 +80,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.dgvCliente);
-            this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.dgCliente);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblPesquisar);
             this.Name = "frmConsultarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.Load += new System.EventHandler(this.frmConsultarCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnPesquisar;
+        public System.Windows.Forms.DataGridView dgCliente;
     }
 }
